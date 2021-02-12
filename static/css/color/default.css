@@ -7,7 +7,9 @@
     color: #fff;
 }
 
-.service-box-01 .sb-icon,
+.service-box-01 .sb-icon {
+    background-color: transparent;
+}
 .resume-box-01 h4,
 .resume-box-01 i,
 .m-btn,

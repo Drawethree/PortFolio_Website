@@ -21,6 +21,8 @@
 
     <!-- End -->
 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3VTVRCFC1D"></script>
+
     <!-- Plugin Css -->
     <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/plugin/font-awesome/css/font.awesome.min.css" rel="stylesheet">
@@ -89,6 +91,9 @@
             <p class="bg-theme">JAVA DEVELOPER</p>
             <br>
             <p class="bg-theme"><b class="server-online"></b> ONLINE PLAYERS ACROSS THE WORLD ENJOY MY CREATIONS</p>
+            <br>
+            <p class="bg-theme"><b class="server-online"></b><b><?= getTotalDownloads() ?></b> DOWNLOADS OF MY
+                SOFTWARE</p>
         </div>
     </div>
 </section>
@@ -100,8 +105,9 @@
     <div class="container">
         <div class="section-title-01">
             <h2>Something little about me</h2>
-            <p><strong>Hello, my name is John.</strong> I am 21 years old Java Developer with almost
-                5 years of experience in software engineering. I am currently studying Informatics at the University of
+            <p><strong>Hello, my name is John.</strong> I am <?= getMyAge() ?> years old Java Developer with
+                <?= getJavaExp() ?> years of experience in software engineering. I am currently studying Informatics at
+                the University of
                 Žilina, Faculty of Management and Informatics. This year I will be finishing my bachelor's degree
                 program.</p>
         </div><!-- .section-title -->
@@ -126,8 +132,8 @@
                             <li><a href="https://github.com/Drawethree"><i class="fa fa-github"
                                                                            aria-hidden="true"></i></a></li>
                             <li><a href="https://www.linkedin.com/in/j%C3%A1n-kluka-2530891a4/"><i
-                                    class="fa fa-linkedin"
-                                    aria-hidden="true"></i></a></li>
+                                            class="fa fa-linkedin"
+                                            aria-hidden="true"></i></a></li>
                         </ul>
                     </div><!-- .social-link -->
                     <div class="about-actions">
@@ -340,11 +346,22 @@
 
                     <div class="col-sm-4 col-xs-6 mix java_development">
                         <div class="portfolio-col-01">
-                            <img src="static/img/faithful.png" title="" alt=""/>
+                            <img src="static/img/mcprison.jpg" title="" alt=""/>
+                            <div class="hover">
+                                <h4><a href="www.mcprison.com">MCPrison.com</a></h4>
+                                <h5>02.03.2021 - Present</h5>
+                                <h5>Java Developer</h5>
+                            </div>
+                        </div>
+                    </div><!-- .col-sm-4 col-sm-12 -->
+
+                    <div class="col-sm-4 col-xs-6 mix java_development">
+                        <div class="portfolio-col-01">
+                            <img src="static/img/faithful.png"  title="" alt=""/>
                             <div class="hover">
                                 <h4>FaithfulMC</h4>
-                                <label>Management of Staff Team, Development Team, Content and Sales Optimisation.
-                                    Additionally, improved sales by 50%.</label>
+                                <h5>01.05.2020 - 01.03.2021</h5>
+                                <h5>Development of HCF Core and various Java applications.</h5>
                             </div>
                         </div>
                     </div><!-- .col-sm-4 col-sm-12 -->
@@ -354,8 +371,8 @@
                             <img src="static/img/fortunerip.png" title="" alt=""/>
                             <div class="hover">
                                 <h4>Fortune.RIP</h4>
-                                <label>Management of Staff Team, Development Team, Content and Sales Optimisation.
-                                    Additionally, improved sales by 50%.</label>
+                                <h5>01.05.2020 - 01.03.2021</h5>
+                                <h5>Development of Prison Core and various Java applications.</h5>
                             </div>
                         </div>
                     </div><!-- .col-sm-4 col-sm-12 -->
@@ -365,8 +382,8 @@
                             <img src="static/img/wildprison.png" title="" alt=""/>
                             <div class="hover">
                                 <h4>WildPrison</h4>
-                                <label>Management of Staff Team, Development Team, Content and Sales Optimisation.
-                                    Additionally, improved sales by 50%.</label>
+                                <h5>Commission</h5>
+                                <h5>Development of whole Prison Core.</h5>
                             </div>
                         </div>
                     </div><!-- .col-sm-4 col-sm-12 -->
@@ -386,9 +403,11 @@
         <div class="owl-carousel testimonial-slider-01">
             <div class="item">
                 <div class="single-testimonial-01 text-center">
-                    <div class="avtar"><img src="https://www.mc-market.org/data/avatars/l/30/30036.jpg?1495609871" alt=""></div>
+                    <div class="avtar"><img src="https://www.mc-market.org/data/avatars/l/30/30036.jpg?1495609871"
+                                            alt=""></div>
                     <div class="avtar-say">
-                        <p>"The best developer I have ever worked with! Always online, fast with his work and a really nice guy to talk to!"</p>
+                        <p>"The best developer I have ever worked with! Always online, fast with his work and a really
+                            nice guy to talk to!"</p>
                         <div class="clearfix"></div>
                         <h4>- Jack</h4>
                         <p class="desg">Previous owner of ComplexGaming</p>
@@ -397,9 +416,12 @@
             </div>
             <div class="item">
                 <div class="single-testimonial-01 text-center">
-                    <div class="avtar"><img src="https://www.mc-market.org/data/avatars/l/111/111917.jpg?1578257064" alt=""></div>
+                    <div class="avtar"><img src="https://www.mc-market.org/data/avatars/l/111/111917.jpg?1578257064"
+                                            alt=""></div>
                     <div class="avtar-say">
-                        <p>"Drawethree has done some work for me. It was very high quality and completed within a respectable timeframe. He offered the source for free as any developer should do, and fixed ~50 bugs (it was a large project)."</p>
+                        <p>"Drawethree has done some work for me. It was very high quality and completed within a
+                            respectable timeframe. He offered the source for free as any developer should do, and fixed
+                            ~50 bugs (it was a large project)."</p>
                         <div class="clearfix"></div>
                         <h4>- MrSwalbert</h4>
                         <p class="desg">Owner of ParagonMC</p>
@@ -408,9 +430,11 @@
             </div>
             <div class="item">
                 <div class="single-testimonial-01 text-center">
-                    <div class="avtar"><img src="https://www.spigotmc.org/data/avatars/l/108/108375.jpg?1466537949" alt=""></div>
+                    <div class="avtar"><img src="https://www.spigotmc.org/data/avatars/l/108/108375.jpg?1466537949"
+                                            alt=""></div>
                     <div class="avtar-say">
-                        <p>"One of the best coders with the best support I have ever seen. His products are worth every cent."</p>
+                        <p>"One of the best coders with the best support I have ever seen. His products are worth every
+                            cent."</p>
                         <div class="clearfix"></div>
                         <h4>- MysticCity</h4>
                         <p class="desg">Buyer of Ultra Prison Core</p>
@@ -524,9 +548,68 @@
 <script src="static/js/custom.js"></script>
 <script src="static/js/home.js"></script>
 
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-3VTVRCFC1D');
+</script>
+
 <!-- Only For Home page -->
 <!-- End -->
 </body>
 <!-- ========== End of Body ========== -->
 
+<?php
+
+function getMyAge()
+{
+    $d1 = new DateTime();
+    $d2 = new DateTime('1999-03-24');
+
+    $diff = $d2->diff($d1);
+    return $diff->y;
+}
+
+function getJavaExp()
+{
+    $d1 = new DateTime();
+    $d2 = new DateTime('2016-03-24');
+
+    $diff = $d2->diff($d1);
+    return $diff->y;
+}
+
+?>
+<?php
+
+function getTotalDownloads()
+{
+    $USERAGENT = "Please change this!";
+    $REQUEST_URL = "https://api.spiget.org/v2/authors/65005/resources";
+
+    $options = array('http' => array('user_agent' => $USERAGENT));
+    $context = stream_context_create($options);
+    $response = @file_get_contents($REQUEST_URL, false, $context);
+
+    if (!isset($response) || is_null($response)) {
+        return "10000+";
+    }
+
+    $data = json_decode($response, true);
+
+    $count = 0;
+    foreach ($data as $item) {
+        $count += $item['downloads'];
+    }
+    return $count;
+}
+
+?>
 </html>
+

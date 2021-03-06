@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Portfolio for Drawethree (Jan Kluka)">
     <meta name="keywords"
@@ -34,6 +34,11 @@
     <link href="static/css/color/default.css" rel="stylesheet">
     <script src="static/js/minecraft.js"></script>
     <!-- End -->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
 
 
 </head>
@@ -341,57 +346,56 @@
                 <button type="button" class="control" data-filter=".my_projects">My Projects</button>
             </div>-->
 
-            <div class="portfolio-filter">
-                <div class="row">
-
-                    <div class="col-sm-4 col-xs-6 mix java_development">
-                        <div class="portfolio-col-01">
-                            <img src="static/img/mcprison.jpg" title="" alt=""/>
-                            <div class="hover">
-                                <h4><a href="www.mcprison.com">MCPrison.com</a></h4>
-                                <h5>02.03.2021 - Present</h5>
-                                <h5>Java Developer</h5>
-                            </div>
+            <div class="row">
+                <div class="col-md-4 java_development">
+                    <div class="portfolio-col-01">
+                        <img class="img-fluid" src="static/img/mcprison.jpg" title="" alt=""/>
+                        <div class="hover">
+                            <h4 class="card-title"><a href="www.mcprison.com">MCPrison.com</a></h4>
+                            <h5 class="card-subtitle">02.03.2021 - Present</h5>
+                            <h5 class="card-subtitle">Java Developer</h5>
                         </div>
-                    </div><!-- .col-sm-4 col-sm-12 -->
+                    </div>
+                </div>
 
-                    <div class="col-sm-4 col-xs-6 mix java_development">
-                        <div class="portfolio-col-01">
-                            <img src="static/img/faithful.png"  title="" alt=""/>
-                            <div class="hover">
-                                <h4>FaithfulMC</h4>
-                                <h5>01.05.2020 - 01.03.2021</h5>
-                                <h5>Development of HCF Core and various Java applications.</h5>
-                            </div>
+
+                <div class="col-md-4 java_development">
+                    <div class="portfolio-col-01">
+                        <img class="img-fluid" src="static/img/faithful.png" title="" alt=""/>
+                        <div class="hover">
+                            <h4 class="card-title"><a href="www.faithfulmc.com/">FaithfulMC.com</a></h4>
+                            <h5 class="card-subtitle">01.05.2020 - 01.03.2021</h5>
+                            <h5 class="card-subtitle">Development of HCF Core and various Java applications.</h5>
                         </div>
-                    </div><!-- .col-sm-4 col-sm-12 -->
+                    </div>
+                </div><!-- .col-sm-4 col-sm-12 -->
 
-                    <div class="col-sm-4 col-xs-6 mix java_development">
-                        <div class="portfolio-col-01">
-                            <img src="static/img/fortunerip.png" title="" alt=""/>
-                            <div class="hover">
-                                <h4>Fortune.RIP</h4>
-                                <h5>01.05.2020 - 01.03.2021</h5>
-                                <h5>Development of Prison Core and various Java applications.</h5>
-                            </div>
+                <div class="col-md-4 java_development">
+                    <div class="portfolio-col-01">
+                        <img class="img-fluid" src="static/img/fortunerip.png" title="" alt=""/>
+                        <div class="hover">
+                            <h4 class="card-title"><a href="www.fortune.rip/">Fortune.RIP</a></h4>
+                            <h5 class="card-subtitle">01.05.2020 - 01.03.2021</h5>
+                            <h5 class="card-subtitle">Development of Prison Core and various Java applications.</h5>
                         </div>
-                    </div><!-- .col-sm-4 col-sm-12 -->
+                    </div>
+                </div><!-- .col-sm-4 col-sm-12 -->
+            </div>
 
-                    <div class="col-sm-4 col-xs-6 mix java_development">
-                        <div class="portfolio-col-01">
-                            <img src="static/img/wildprison.png" title="" alt=""/>
-                            <div class="hover">
-                                <h4>WildPrison</h4>
-                                <h5>Commission</h5>
-                                <h5>Development of whole Prison Core.</h5>
-                            </div>
+            <div class="row">
+                <div class="col-md-4 java_development">
+                    <div class="portfolio-col-01">
+                        <img class="img-fluid" src="static/img/wildprison.png" title="" alt=""/>
+                        <div class="hover">
+                            <h4 class="card-title"><a href="https://store.wildprison.net/">WildPrison.net</a></h4>
+                            <h5 class="card-subtitle">Project on request</h5>
+                            <h5 class="card-subtitle">Development of whole Prison Core.</h5>
                         </div>
-                    </div><!-- .col-sm-4 col-sm-12 -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
-                </div><!-- .row -->
-            </div><!-- .portfolio-filter -->
-
-        </div><!-- .portfolio-box -->
     </div><!-- .container -->
 </section>
 <!-- ========== End Of Work ========== -->
@@ -516,6 +520,10 @@
         });
 
         MinecraftAPI.getServerStatus('play.wildprison.net', {}, function (err, status) {
+            addPlayers(status.players.now)
+        });
+
+        MinecraftAPI.getServerStatus('mcprison.com', {}, function (err, status) {
             addPlayers(status.players.now)
         });
 
